@@ -1,0 +1,8 @@
+-- 출처 : https://school.programmers.co.kr/learn/courses/30/lessons/59045?language=oracle
+
+SELECT I.ANIMAL_ID, I.ANIMAL_TYPE, I.NAME
+FROM ANIMAL_INS I, ANIMAL_OUTS O
+WHERE I.ANIMAL_ID = O.ANIMAL_ID
+AND I.SEX_UPON_INTAKE LIKE 'Intact%'
+AND O.SEX_UPON_OUTCOME NOT LIKE 'Intact%'
+ORDER BY I.ANIMAL_ID;
